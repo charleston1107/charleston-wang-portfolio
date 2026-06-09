@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900" role="img" aria-label="Abstract project artwork">
+  <rect width="900" height="900" fill="#fbfbfb"/>
+  <rect x="130" y="130" width="610" height="610" rx="64" fill="#151515"/>
+  <circle cx="303" cy="315" r="112" fill="#f7c948"/>
+  <circle cx="570" cy="575" r="148" fill="#2a9d8f"/>
+</svg>
