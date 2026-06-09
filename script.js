@@ -1,6 +1,7 @@
 const body = document.body;
 const cards = Array.from(document.querySelectorAll(".project-card"));
 const idCards = Array.from(document.querySelectorAll(".id-card"));
+const idCardStack = document.querySelector(".id-card-stack");
 const allWorksLink = document.querySelector("#all-works-link");
 
 function setMode(mode) {
@@ -19,6 +20,15 @@ function setMode(mode) {
 
 idCards.forEach((card) => {
   card.addEventListener("click", () => setMode(card.dataset.mode));
+});
+
+idCardStack.addEventListener("click", (event) => {
+  const stackRect = idCardStack.getBoundingClientRect();
+  const clickedRightSide = event.clientX > stackRect.left + stackRect.width * 0.5;
+
+  if (clickedRightSide) {
+    setMode("art");
+  }
 });
 
 allWorksLink.addEventListener("click", (event) => {
