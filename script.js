@@ -1,45 +1,96 @@
 const body = document.body;
-const cards = Array.from(document.querySelectorAll(".project-card"));
 const idCards = Array.from(document.querySelectorAll(".id-card"));
-const idCardStack = document.querySelector(".id-card-stack");
+const designCard = document.querySelector(".id-card-design");
+const artCard = document.querySelector(".id-card-art");
+const designAccordion = document.querySelector(".design-accordion");
+const artAccordion = document.querySelector(".art-accordion");
 const allWorksLink = document.querySelector("#all-works-link");
+const worksSection = document.querySelector("#works");
 
-function setMode(mode) {
+function setBodyMode(mode) {
   body.classList.remove("design-mode", "art-mode", "all-works-mode");
-  body.classList.add(`${mode}-mode`);
 
+  if (mode === "all") {
+    body.classList.add("all-works-mode");
+  } else {
+    body.classList.add(`${mode}-mode`);
+  }
+}
+
+function setActiveCard(mode) {
   idCards.forEach((card) => {
     card.classList.toggle("is-active", card.dataset.mode === mode);
   });
-
-  cards.forEach((card) => {
-    const shouldShow = mode === "all-works" || card.dataset.group === mode;
-    card.hidden = !shouldShow;
-  });
 }
 
-idCards.forEach((card) => {
-  card.addEventListener("click", () => setMode(card.dataset.mode));
+function openAccordion(mode) {
+  if (mode === "design") {
+    if (designAccordion) designAccordion.open = true;
+    if (artAccordion) artAccordion.open = false;
+  }
+
+  if (mode === "art") {
+    if (designAccordion) designAccordion.open = false;
+    if (artAccordion) artAccordion.open = true;
+  }
+
+  if (mode === "all") {
+    if (designAccordion) designAccordion.open = true;
+    if (artAccordion) artAccordion.open = true;
+  }
+}
+
+function setMode(mode, shouldScroll = false) {
+  setBodyMode(mode);
+  setActiveCard(mode);
+  openAccordion(mode);
+
+  if (shouldScroll) {
+    const target = mode === "art" ? artAccordion : worksSection;
+    target?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+}
+
+designCard?.addEventListener("click", () => {
+  history.replaceState(null, "", "index.html?view=design#works");
+  setMode("design", true);
 });
 
-idCardStack.addEventListener("click", (event) => {
-  const stackRect = idCardStack.getBoundingClientRect();
-  const clickedRightSide = event.clientX > stackRect.left + stackRect.width * 0.5;
+artCard?.addEventListener("click", () => {
+  history.replaceState(null, "", "index.html?view=art#works");
+  setMode("art", true);
+});
 
-  if (clickedRightSide) {
-    setMode("art");
+allWorksLink?.addEventListener("click", (event) => {
+  event.preventDefault();
+  history.replaceState(null, "", "index.html?view=all#works");
+  setMode("all", true);
+});
+
+designAccordion?.addEventListener("toggle", () => {
+  if (designAccordion.open && !artAccordion?.open) {
+    setBodyMode("design");
+    setActiveCard("design");
   }
 });
 
-allWorksLink.addEventListener("click", (event) => {
-  event.preventDefault();
-  setMode("all-works");
-  history.pushState(null, "", "index.html?view=all#works");
-  document.querySelector("#works").scrollIntoView({ behavior: "smooth" });
+artAccordion?.addEventListener("toggle", () => {
+  if (artAccordion.open) {
+    setBodyMode("art");
+    setActiveCard("art");
+  } else if (designAccordion?.open) {
+    setBodyMode("design");
+    setActiveCard("design");
+  }
 });
 
-const initialMode = new URLSearchParams(window.location.search).get("view") === "all"
-  ? "all-works"
-  : "design";
+const params = new URLSearchParams(window.location.search);
+const initialView = params.get("view");
 
-setMode(initialMode);
+if (initialView === "all") {
+  setMode("all", window.location.hash === "#works");
+} else if (initialView === "art") {
+  setMode("art", window.location.hash === "#works");
+} else {
+  setMode("design", false);
+}

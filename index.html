@@ -19,149 +19,173 @@
     <main>
       <section class="hero-section" aria-label="Portfolio identity cards">
         <div class="hero-background" aria-hidden="true"></div>
-        <div class="id-card-stack">
-          <button class="id-card id-card-design is-active" type="button" data-mode="design" aria-label="Show design projects">
-            <img src="assets/id_design.png" alt="Design identity card" />
-          </button>
-          <button class="id-card id-card-art" type="button" data-mode="art" aria-label="Show art projects">
-            <img src="assets/id_art.png" alt="Art identity card" />
-          </button>
+
+        <div class="hero-content">
+          <div class="hero-intro">
+            <h1>Hi, I am <span class="your-name">Jiaxin Wang</span>, or Charleston.</h1>
+            <p>I am a:</p>
+          </div>
+
+          <div class="id-card-row">
+            <div class="id-card-item">
+              <button class="id-card id-card-design is-active" type="button" data-mode="design" aria-label="Show design and research projects">
+                <img src="assets/id_design.png" alt="Design identity card" />
+              </button>
+              <p class="card-hint">↑ Click to view my design and research works.</p>
+            </div>
+
+            <div class="id-card-item">
+              <button class="id-card id-card-art" type="button" data-mode="art" aria-label="Show digital art projects">
+                <img src="assets/id_art.png" alt="Art identity card" />
+              </button>
+              <p class="card-hint">↑ Click to view my digital art works.</p>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section class="works-grid" id="works" aria-label="Project gallery">
-        <a class="project-card" href="project-1.html" target="_blank" rel="noopener" data-group="art">
-          <span class="image-wrap">
-            <img src="assets/Cortexa_1.jpg" alt="Project 1 preview" />
-            <span class="hover-cover">
-              <span>Discursive Design</span>
-              <span>AIGC Film</span>
-            </span>
-          </span>
-          <span class="project-meta">
-            <span class="project-title">CORTEXA</span>
-            <span class="project-keyword">Discursive Design</span>
-          </span>
-        </a>
+      <section class="works-section" id="works" aria-label="Project gallery">
+        <details class="work-accordion design-accordion" data-mode="design" open>
+          <summary>Design &amp; Research</summary>
+          <div class="works-grid">
+            <a class="project-card" href="project-4.html" target="_blank" rel="noopener" data-group="design">
+                      <span class="image-wrap">
+                        <img src="assets/TUI_4.png" alt="Project 4 preview" />
+                        <span class="hover-cover">
+                          <span>Edcucation</span>
+                          <span>Human-Food Interaction</span>
+                          <span>Tangible and Embodied Interaction</span>
+                        </span>
+                      </span>
+                      <span class="project-meta">
+                        <span class="project-title">TUI WooGu</span>
+                        <span class="project-keyword">HCI Research</span>
+                      </span>
+                    </a>
 
-        <a class="project-card" href="project-2.html" target="_blank" rel="noopener" data-group="art">
-          <span class="image-wrap">
-            <img src="assets/Dissociated_2.png" alt="Project 2 preview" />
-            <span class="hover-cover">
-              <span>Speculative Narrative</span>
-              <span>Installation</span>
-              <span>Immersive Space</span>
-            </span>
-          </span>
-          <span class="project-meta">
-            <span class="project-title">Dissociated Mind</span>
-            <span class="project-keyword">Artwork</span>
-          </span>
-        </a>
+            <a class="project-card" href="project-5.html" target="_blank" rel="noopener" data-group="design">
+                      <span class="image-wrap">
+                        <img src="assets/NibbleBuddy_5.png" alt="Project 5 preview" />
+                        <span class="hover-cover">
+                          <span>Design for Wellbeing</span>
+                          <span>Research through Design</span>
+                          <span>Human-Food Interaction</span>
+                        </span>
+                      </span>
+                      <span class="project-meta">
+                        <span class="project-title">NibbleBuddy: Multisensory Dining for Eating Disorder</span>
+                        <span class="project-keyword">HCI Research - Ongoing</span>
+                      </span>
+                    </a>
 
-        <a class="project-card" href="project-3.html" target="_blank" rel="noopener" data-group="art">
-          <span class="image-wrap">
-            <img src="assets/bacheng_3.png" alt="Project 3 preview" />
-            <span class="hover-cover">
-              <span>Critical Cartography</span>
-              <span>Counter-Mapping</span>
-              <span>Speculative Narrative</span>
-            </span>
-          </span>
-          <span class="project-meta">
-            <span class="project-title">Lego-ing Bacheng</span>
-            <span class="project-keyword">Artwork</span>
-          </span>
-        </a>
+            <a class="project-card" href="project-6.html" target="_blank" rel="noopener" data-group="design">
+                      <span class="image-wrap">
+                        <img src="assets/SewingEmo_6.png" alt="Project 6 preview" />
+                        <span class="hover-cover">
+                          <span>Product Design</span>
+                          <span>Design for Wellbeing</span>
+                        </span>
+                      </span>
+                      <span class="project-meta">
+                        <span class="project-title">Sewing Emotions</span>
+                        <span class="project-keyword">Design - Ongoing Project</span>
+                      </span>
+                    </a>
 
-        <a class="project-card" href="project-4.html" target="_blank" rel="noopener" data-group="design">
-          <span class="image-wrap">
-            <img src="assets/TUI_4.png" alt="Project 4 preview" />
-            <span class="hover-cover">
-              <span>Edcucation</span>
-              <span>Human-Food Interaction</span>
-              <span>Tangible and Embodied Interaction</span>
-            </span>
-          </span>
-          <span class="project-meta">
-            <span class="project-title">TUI WooGu</span>
-            <span class="project-keyword">HCI Research</span>
-          </span>
-        </a>
+            <a class="project-card" href="project-7.html" target="_blank" rel="noopener" data-group="design">
+                      <span class="image-wrap">
+                        <img src="assets/crochet_7.png" alt="Project 7 preview" />
+                        <span class="hover-cover">
+                          <span>Autobiographical Research</span>
+                          <span>AI for Learning</span>
+                          <span>Crochet</span>
+                        </span>
+                      </span>
+                      <span class="project-meta">
+                        <span class="project-title">I Want to Learn Crochet</span>
+                        <span class="project-keyword">HCI Research - Ongoing</span>
+                      </span>
+                    </a>
+          </div>
+        </details>
 
-        <a class="project-card" href="project-5.html" target="_blank" rel="noopener" data-group="design">
-          <span class="image-wrap">
-            <img src="assets/NibbleBuddy_5.png" alt="Project 5 preview" />
-            <span class="hover-cover">
-              <span>Design for Wellbeing</span>
-              <span>Research through Design</span>
-              <span>Human-Food Interaction</span>
-            </span>
-          </span>
-          <span class="project-meta">
-            <span class="project-title">NibbleBuddy: Multisensory Dining for Eating Disorder</span>
-            <span class="project-keyword">HCI Research - Ongoing</span>
-          </span>
-        </a>
+        <details class="work-accordion art-accordion" data-mode="art">
+          <summary>Digital Art</summary>
+          <div class="works-grid">
+            <a class="project-card" href="project-1.html" target="_blank" rel="noopener" data-group="art">
+                      <span class="image-wrap">
+                        <img src="assets/Cortexa_1.jpg" alt="Project 1 preview" />
+                        <span class="hover-cover">
+                          <span>Discursive Design</span>
+                          <span>AIGC Film</span>
+                        </span>
+                      </span>
+                      <span class="project-meta">
+                        <span class="project-title">CORTEXA</span>
+                        <span class="project-keyword">Discursive Design</span>
+                      </span>
+                    </a>
 
-        <a class="project-card" href="project-6.html" target="_blank" rel="noopener" data-group="design">
-          <span class="image-wrap">
-            <img src="assets/SewingEmo_6.png" alt="Project 6 preview" />
-            <span class="hover-cover">
-              <span>Product Design</span>
-              <span>Design for Wellbeing</span>
-            </span>
-          </span>
-          <span class="project-meta">
-            <span class="project-title">Sewing Emotions</span>
-            <span class="project-keyword">Design - Ongoing Project</span>
-          </span>
-        </a>
+            <a class="project-card" href="project-2.html" target="_blank" rel="noopener" data-group="art">
+                      <span class="image-wrap">
+                        <img src="assets/Dissociated_2.png" alt="Project 2 preview" />
+                        <span class="hover-cover">
+                          <span>Speculative Narrative</span>
+                          <span>Installation</span>
+                          <span>Immersive Space</span>
+                        </span>
+                      </span>
+                      <span class="project-meta">
+                        <span class="project-title">Dissociated Mind</span>
+                        <span class="project-keyword">Artwork</span>
+                      </span>
+                    </a>
 
-        <a class="project-card" href="project-7.html" target="_blank" rel="noopener" data-group="design">
-          <span class="image-wrap">
-            <img src="assets/crochet_7.png" alt="Project 7 preview" />
-            <span class="hover-cover">
-              <span>Autobiographical Research</span>
-              <span>AI for Learning</span>
-              <span>Crochet</span>
-            </span>
-          </span>
-          <span class="project-meta">
-            <span class="project-title">I Want to Learn Crochet</span>
-            <span class="project-keyword">HCI Research - Ongoing</span>
-          </span>
-        </a>
+            <a class="project-card" href="project-3.html" target="_blank" rel="noopener" data-group="art">
+                      <span class="image-wrap">
+                        <img src="assets/bacheng_3.png" alt="Project 3 preview" />
+                        <span class="hover-cover">
+                          <span>Critical Cartography</span>
+                          <span>Counter-Mapping</span>
+                          <span>Speculative Narrative</span>
+                        </span>
+                      </span>
+                      <span class="project-meta">
+                        <span class="project-title">Lego-ing Bacheng</span>
+                        <span class="project-keyword">Artwork</span>
+                      </span>
+                    </a>
 
-        <a class="project-card" href="project-8.html" target="_blank" rel="noopener" data-group="art">
-          <span class="image-wrap">
-            <img src="assets/lullaby_8.JPG" alt="Project 8 preview" />
-            <span class="hover-cover">
-              <span>Installation</span>
-              <span>3D Film</span>
-            </span>
-          </span>
-          <span class="project-meta">
-            <span class="project-title">Lullaby 醒在此地</span>
-            <span class="project-keyword">Artwork</span>
-          </span>
-        </a>
+            <a class="project-card" href="project-8.html" target="_blank" rel="noopener" data-group="art">
+                      <span class="image-wrap">
+                        <img src="assets/lullaby_8.JPG" alt="Project 8 preview" />
+                        <span class="hover-cover">
+                          <span>Installation</span>
+                          <span>3D Film</span>
+                        </span>
+                      </span>
+                      <span class="project-meta">
+                        <span class="project-title">Lullaby 醒在此地</span>
+                        <span class="project-keyword">Artwork</span>
+                      </span>
+                    </a>
 
-        <a class="project-card" href="project-9.html" target="_blank" rel="noopener" data-group="art">
-          <span class="image-wrap">
-            <img src="assets/graphics_9.png" alt="Project 9 preview" />
-            <span class="hover-cover">
-              <span>Creative Coding</span>
-              <span>Computer Graphics</span>
+            <a class="project-card" href="project-9.html" target="_blank" rel="noopener" data-group="art">
+                      <span class="image-wrap">
+                        <img src="assets/graphics_9.png" alt="Project 9 preview" />
+                        <span class="hover-cover">
+                          <span>Creative Coding</span>
+                          <span>Computer Graphics</span>
               
-            </span>
-          </span>
-          <span class="project-meta">
-            <span class="project-title">Processing Coding Collection</span>
-            <span class="project-keyword">Prototypes</span>
-          </span>
-        </a>
-
+                        </span>
+                      </span>
+                      <span class="project-meta">
+                        <span class="project-title">Processing Coding Collection</span>
+                        <span class="project-keyword">Prototypes</span>
+                      </span>
+                    </a>
+          </div>
+        </details>
       </section>
     </main>
     <script src="script.js"></script>
