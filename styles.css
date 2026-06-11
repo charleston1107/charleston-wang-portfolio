@@ -275,6 +275,24 @@ a {
   padding: 28px var(--page-gutter) 72px;
 }
 
+.project-light {
+  background: #ffffff;
+  color: #111111;
+}
+
+.project-dark {
+  --text: #ffffff;
+  --muted: #c7c7c7;
+  --line: #000000;
+  background: #000000;
+  color: #ffffff;
+}
+
+.project-dark .site-header {
+  background: #000000;
+  color: #ffffff;
+}
+
 .project-heading {
   max-width: 980px;
   margin: 0 auto 28px;
@@ -295,7 +313,22 @@ a {
   line-height: 1.55;
 }
 
+.project-heading .project-subtitle {
+  max-width: 900px;
+  color: inherit;
+  font-size: clamp(22px, 3vw, 34px);
+  line-height: 1.2;
+}
+
+.project-heading .project-date {
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.4;
+}
+
 .video-frame {
+  position: relative;
   max-width: 980px;
   margin: 0 auto 30px;
   aspect-ratio: 16 / 9;
@@ -319,6 +352,22 @@ a {
   margin: 0 auto;
   border: 1px solid var(--line);
   background: #ffffff;
+}
+
+.project-pdf-full {
+  width: 100vw;
+  max-width: none;
+  height: calc(100dvh - 72px);
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  border: 0;
+  background: #ffffff;
+}
+
+.project-dark .video-frame,
+.project-dark .pdf-viewer,
+.project-dark .project-pdf-full {
+  background: #000000;
 }
 
 .split-project {
@@ -453,6 +502,10 @@ a {
 
   .pdf-viewer {
     height: 70vh;
+  }
+
+  .project-pdf-full {
+    height: calc(100dvh - 64px);
   }
 
   .cv-pdf {
