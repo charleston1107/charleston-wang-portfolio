@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@400;700&display=swap");
+
 :root {
   --text: #111111;
   --muted: #747474;
@@ -295,8 +297,8 @@ a {
 
 .project-heading {
   display: grid;
-  grid-template-columns: minmax(120px, 0.28fr) minmax(0, 1fr);
-  gap: clamp(24px, 5vw, 72px);
+  grid-template-columns: 1fr;
+  gap: 14px;
   max-width: 1180px;
   margin: 0 auto 34px;
   align-items: start;
@@ -348,7 +350,8 @@ a {
 
 .video-frame {
   position: relative;
-  max-width: 980px;
+  width: 75vw;
+  max-width: 1180px;
   margin: 0 auto 30px;
   aspect-ratio: 16 / 9;
   overflow: hidden;
@@ -406,11 +409,11 @@ a {
 }
 
 .project-pdf-full {
-  width: 90vw;
+  width: 75vw;
   max-width: none;
-  height: calc(100dvh - 72px);
-  margin-left: calc(50% - 45vw);
-  margin-right: calc(50% - 45vw);
+  height: min(82vh, 920px);
+  margin-left: auto;
+  margin-right: auto;
   border: 0;
   background: #ffffff;
 }
@@ -464,7 +467,9 @@ a {
 .mini-project h2 {
   margin: 0;
   color: #111111;
+  font-family: "Anonymous Pro", "Courier New", monospace;
   font-size: clamp(24px, 4vw, 42px);
+  font-weight: 700;
   line-height: 1.05;
 }
 
@@ -627,8 +632,14 @@ a {
     height: 70vh;
   }
 
+  .video-frame,
   .project-pdf-full {
+    width: 100%;
     height: calc(100dvh - 64px);
+  }
+
+  .video-frame {
+    height: auto;
   }
 
   .fullscreen-pdf {
