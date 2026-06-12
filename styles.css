@@ -467,7 +467,7 @@ a {
 .mini-project h2 {
   margin: 0;
   color: #111111;
-  font-family: "Anonymous Pro", "Courier New", monospace;
+  font-family: Anonymous Pro, monospace;
   font-size: clamp(18px, 3vw, 36px);
   font-weight: 500;
   line-height: 1.05;
