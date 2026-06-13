@@ -559,7 +559,7 @@ a {
 
 .about-page {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(260px, 0.72fr);
+  grid-template-columns: minmax(0, 1fr) minmax(140px, 0.72fr);
   gap: clamp(32px, 6vw, 84px);
   align-items: start;
   max-width: 1180px;
@@ -580,6 +580,7 @@ a {
 .about-image img {
   display: block;
   width: 100%;
+  min-width: 0;
   height: auto;
   object-fit: cover;
 }
@@ -683,10 +684,6 @@ a {
   .mini-project > p,
   .mini-project > .project-action-row {
     width: 100%;
-  }
-
-  .about-page {
-    grid-template-columns: 1fr;
   }
 
   .fullscreen-pdf {
