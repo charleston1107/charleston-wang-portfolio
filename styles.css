@@ -465,6 +465,15 @@ a {
   gap: 20px;
 }
 
+.mini-project > h2,
+.mini-project > p,
+.mini-project > .project-action-row {
+  width: 75vw;
+  max-width: 1180px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .mini-project h2 {
   margin: 0;
   color: #111111;
@@ -546,6 +555,33 @@ a {
   color: #333333;
   font-size: 18px;
   line-height: 1.65;
+}
+
+.about-page {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 0.72fr);
+  gap: clamp(32px, 6vw, 84px);
+  align-items: start;
+  max-width: 1180px;
+}
+
+.about-copy {
+  min-width: 0;
+}
+
+.contact-label {
+  color: #10C000;
+}
+
+.about-image {
+  margin: 0;
+}
+
+.about-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 .cv-page {
@@ -641,6 +677,16 @@ a {
 
   .video-frame {
     height: auto;
+  }
+
+  .mini-project > h2,
+  .mini-project > p,
+  .mini-project > .project-action-row {
+    width: 100%;
+  }
+
+  .about-page {
+    grid-template-columns: 1fr;
   }
 
   .fullscreen-pdf {
