@@ -445,6 +445,13 @@ a {
   height: auto;
 }
 
+.project-image-stack-proj6
+{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .project-pdf-full {
   width: 75vw;
   max-width: none;
