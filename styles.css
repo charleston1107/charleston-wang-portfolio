@@ -349,6 +349,17 @@ a {
   line-height: 1.4;
 }
 
+.project-heading .project-publication {
+  max-width: 980px;
+  margin-top: 18px;
+  color: #000000;
+  font-size: 16px;
+  line-height: 1.55;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
 .video-frame {
   position: relative;
   width: 75vw;
@@ -407,6 +418,31 @@ a {
 
 .project-dark .project-description {
   color: #d9d9d9;
+}
+
+.project-detail-section {
+  display: grid;
+  gap: 30px;
+}
+
+.project-detail-section h2 {
+  margin: 0;
+  color: #000000;
+  font-family: Anonymous Pro, monospace;
+  font-size: clamp(13px, 2vw, 40px);
+  font-weight: 600;
+  line-height: 1.05;
+}
+
+.project-image-stack {
+  display: grid;
+  gap: 30px;
+}
+
+.project-image-stack img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .project-pdf-full {
@@ -559,7 +595,7 @@ a {
 
 .about-page {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(140px, 0.72fr);
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 0.72fr);
   gap: clamp(32px, 6vw, 84px);
   align-items: start;
   max-width: 1180px;
@@ -684,6 +720,10 @@ a {
   .mini-project > p,
   .mini-project > .project-action-row {
     width: 100%;
+  }
+
+  .about-page {
+    grid-template-columns: 1fr;
   }
 
   .fullscreen-pdf {
