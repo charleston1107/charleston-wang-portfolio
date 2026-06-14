@@ -396,7 +396,7 @@ a {
 }
 
 .project-hero-image {
-  width: 100%;
+  width: 80%;
   margin: 0;
   overflow: hidden;
   border-radius: 16px;
@@ -441,7 +441,7 @@ a {
 
 .project-image-stack img {
   display: block;
-  width: 100%;
+  width: 80%;
   height: auto;
 }
 
